@@ -1,10 +1,18 @@
-﻿using Pomodoro.Console;
+﻿using Pomodoro.Business.Enums;
+using Pomodoro.Console.Menus;
 
 Console.WriteLine("Hello World");
 
-Menu menu = new Menu("Pomodoro", new List<string>{
-    "Item1", "Item2", "Item3"
-});
+Console.WriteLine("""
+ ____  _____  __  __  _____  ____  _____  ____  _____ 
+(  _ \(  _  )(  \/  )(  _  )(  _ \(  _  )(  _ \(  _  )
+ )___/ )(_)(  )    (  )(_)(  )(_) ))(_)(  )   / )(_)( 
+(__)  (_____)(_/\/\_)(_____)(____/(_____)(_)\_)(_____)
+""");
 
-menu.Start();
+AppStatus appStatus = MainMenu.Open();
+while (appStatus == AppStatus.Running)
+{
+   appStatus = MainMenu.Open();
+}
 System.Console.ReadLine();

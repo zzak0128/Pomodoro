@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Pomodoro.Business;
+﻿using Pomodoro.Business;
 
 namespace Pomodoro.Console;
 
@@ -17,7 +16,7 @@ public class Menu
         MenuOptions = menuOptions;
     }
 
-    public void Start()
+    public int Start()
     {
         System.Console.WriteLine(Title);
 
@@ -50,14 +49,16 @@ public class Menu
                     SelectedIndex += 1;
                     break;
 
+                case ConsoleKey.Enter:
+                    return SelectedIndex;
                 default:
                     break;
             }
+
             Render(SelectedIndex);
             keyPressed = System.Console.ReadKey();
         }
-
-        Environment.Exit(0);
+        return SelectedIndex;
     }
 
     private void Render(int selectedIndex)
