@@ -19,35 +19,16 @@ public class TimerMenu
         Duration = duration;
     }
 
-    public void StartTimer()
+    public async Task Open()
     {
         System.Console.Clear();
-        System.Console.Write("POMODORO TIMER");
+        System.Console.WriteLine("POMODORO TIMER");
 
-        StartTime = DateTime.Now;
-        while (ElapsedTime.Seconds != 5)
-        {
-            System.Console.SetCursorPosition(0, 1);
-            System.Console.Write(ElapsedTime);
-        }
+        var timer = new Pomodoro.Business.Timer(3);
+        await timer.Start();
 
         System.Console.WriteLine($"{Environment.NewLine}Time has Elapsed");
 
-        SoundAlarm();
         System.Console.ReadLine();
-    }
-
-    private void SoundAlarm()
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                System.Console.Beep();
-                Thread.Sleep(500);
-            }
-            System.Console.Beep();
-            Thread.Sleep(1500);
-        }
     }
 }

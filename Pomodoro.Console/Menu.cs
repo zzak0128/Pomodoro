@@ -1,6 +1,4 @@
-﻿using Pomodoro.Business;
-
-namespace Pomodoro.Console;
+﻿namespace Pomodoro.Console;
 
 public class Menu
 {

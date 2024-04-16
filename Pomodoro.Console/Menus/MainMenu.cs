@@ -21,8 +21,8 @@ public static class MainMenu
         {
             case 0:
                 System.Console.WriteLine("Starting Timer");
-                TimerMenu timerMenu = new(TimeSpan.FromSeconds(5));
-                timerMenu.StartTimer();
+                TimerMenu timerMenu = new(TimeSpan.FromSeconds(3));
+                timerMenu.Open().Wait();
                 return AppStatus.Running;
             case 1:
                 System.Console.WriteLine("Starting short break");
