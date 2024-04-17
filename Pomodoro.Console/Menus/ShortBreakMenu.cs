@@ -3,16 +3,15 @@ using Pomodoro.Library;
 
 namespace Pomodoro.Console.Menus;
 
-
-public static class TimerMenu
+public static class ShortBreakMenu
 {
     public static void Open()
     {
         System.Console.Clear();
-        System.Console.WriteLine("STARTING POMODORO TIMER");
-        InfoWriter.Info("25 Minute Timer has started");
+        System.Console.WriteLine("STARTING SHORT BREAK TIMER");
+        InfoWriter.Info("5 Minute Timer has started");
 
-        var timer = new ConsoleTimer(25);
+        var timer = new ConsoleTimer(5);
         timer.Run();
 
         InfoWriter.Success($"{Environment.NewLine}Time has Elapsed");

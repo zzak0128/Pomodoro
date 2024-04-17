@@ -1,5 +1,6 @@
 ﻿
-using Pomodoro.Business.Enums;
+using Pomodoro.Library;
+using Pomodoro.Library.Enums;
 
 namespace Pomodoro.Console.Menus;
 
@@ -21,17 +22,21 @@ public static class MainMenu
         {
             case 0:
                 System.Console.WriteLine("Starting Timer");
-                TimerMenu timerMenu = new(TimeSpan.FromSeconds(3));
-                timerMenu.Open().Wait();
+                TimerMenu.Open();
+
                 return AppStatus.Running;
             case 1:
                 System.Console.WriteLine("Starting short break");
+                ShortBreakMenu.Open();
+
                 return AppStatus.Running;
             case 2:
                 System.Console.WriteLine("Starting long break");
+                LongBreakMenu.Open();
+                
                 return AppStatus.Running;
             case 3:
-                System.Console.WriteLine("Exiting Application");
+                System.Console.Clear();
                 return AppStatus.Exiting;
             default:
                 System.Console.WriteLine("Unexpected option, closing");

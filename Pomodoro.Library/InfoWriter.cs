@@ -1,4 +1,4 @@
-﻿namespace Pomodoro.Business;
+﻿namespace Pomodoro.Library;
 
 public static class InfoWriter
 {

@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Console", "Pomodor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Library", "Pomodoro.Library\Pomodoro.Library.csproj", "{CFD2BCE4-9A24-4059-AA85-9E3A3F950F3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Business", "Pomodoro.Business\Pomodoro.Business.csproj", "{853E667B-48D8-46C9-95A6-3D5B27816005}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

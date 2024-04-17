@@ -1,4 +1,4 @@
-﻿namespace Pomodoro.Business.Enums;
+﻿namespace Pomodoro.Library.Enums;
 
 public enum AppStatus
 {

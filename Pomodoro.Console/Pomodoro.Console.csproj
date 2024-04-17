@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pomodoro.Library\Pomodoro.Library.csproj" />
-    <ProjectReference Include="..\Pomodoro.Business\Pomodoro.Business.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

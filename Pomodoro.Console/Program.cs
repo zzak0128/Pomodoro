@@ -1,7 +1,5 @@
-﻿using Pomodoro.Business.Enums;
-using Pomodoro.Console.Menus;
-
-Console.WriteLine("Hello World");
+﻿using Pomodoro.Console.Menus;
+using Pomodoro.Library.Enums;
 
 Console.WriteLine("""
  ____  _____  __  __  _____  ____  _____  ____  _____ 
@@ -15,4 +13,3 @@ while (appStatus == AppStatus.Running)
 {
    appStatus = MainMenu.Open();
 }
-System.Console.ReadLine();
