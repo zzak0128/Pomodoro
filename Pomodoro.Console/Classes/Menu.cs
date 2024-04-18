@@ -1,4 +1,4 @@
-﻿namespace Pomodoro.Library;
+﻿namespace Pomodoro.Console.Classes;
 
 public class Menu
 {

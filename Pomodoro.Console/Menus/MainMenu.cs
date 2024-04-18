@@ -1,5 +1,5 @@
 ﻿
-using Pomodoro.Library;
+using Pomodoro.Console.Classes;
 using Pomodoro.Library.Enums;
 
 namespace Pomodoro.Console.Menus;
