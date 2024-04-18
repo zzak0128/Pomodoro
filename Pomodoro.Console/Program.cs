@@ -18,3 +18,6 @@ while (appStatus == AppStatus.Running)
 {
    appStatus = MainMenu.Open();
 }
+
+Console.Clear();
+Console.CursorVisible = true;

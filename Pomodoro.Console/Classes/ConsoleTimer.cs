@@ -13,13 +13,14 @@ public class ConsoleTimer : Library.Timer
         StartTime = DateTime.Now;
 
         System.Console.WriteLine("Press ESC to cancel...");
-        
+
         var cursorPosition = System.Console.GetCursorPosition();
 
         while (ElapsedTime.TotalMinutes < Duration)
         {
-                System.Console.SetCursorPosition(cursorPosition.Left, cursorPosition.Top);
-                System.Console.Write(ElapsedTime.ToString(@"mm\:ss"));
+            System.Console.SetCursorPosition(cursorPosition.Left, cursorPosition.Top);
+            System.Console.Write(ElapsedTime.ToString(@"mm\:ss"));
+            Thread.Sleep(20);
 
             if (System.Console.KeyAvailable && System.Console.ReadKey(true).Key == ConsoleKey.Escape)
             {
